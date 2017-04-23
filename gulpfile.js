@@ -33,15 +33,11 @@ function handleErrors () {
  * https://www.npmjs.com/package/merge-stream
  */
 gulp.task( 'build:fonts', () => {
-  const toAssetsCss = gulp.src([
-      'node_modules/slick-carousel/slick/ajax-loader.gif'
-    ])
+  const toAssetsCss = gulp.src([])
     .pipe(gulp.dest('assets/css'))
     .pipe(gulp.dest('_site/assets/css'));
 
-  const toAssetsFonts = gulp.src([
-      'node_modules/slick-carousel/slick/fonts/*'
-    ])
+  const toAssetsFonts = gulp.src([])
     .pipe(gulp.dest('assets/fonts'))
     .pipe(gulp.dest('_site/assets/fonts'));
 
@@ -72,8 +68,7 @@ gulp.task( 'build:styles', () =>
     .pipe( $.sass( {
       'includePaths': [
         // Include paths here to use @import without paths
-        'node_modules/normalize.css/',
-        'node_modules/slick-carousel/slick/'
+        'node_modules/bootstrap/scss'
       ],
       'errLogToConsole': true,
       'outputStyle': 'expanded' // Options: nested, expanded, compact, compressed
@@ -135,7 +130,7 @@ gulp.task( 'clean:images', ( callback ) => {
 gulp.task( 'build:scripts', () =>
   gulp.src( [
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/bootstrap/dist/js/bootstrap.js',
     // Add all npm packages first
     '_assets/js/**/*.js'
   ] )
