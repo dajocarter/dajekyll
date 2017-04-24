@@ -7,13 +7,23 @@
 
     {% include header.html %}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+    <main class="container-fluid" aria-label="Content">
 
-    {% include footer.html %}
+      <div class="row">
+
+        {% include left-sidebar.html %}
+
+        <div class="col-lg-6">
+
+          {{ content }}
+
+        </div>
+
+        {% include right-sidebar.html %}
+
+      </div>
+
+    </main>
 
   </body>
 
