@@ -26,7 +26,7 @@ description: Hi, I'm David Carter and I'm addicted to the internet. I am current
   the Director of Technical Services at [Tribeswell](https://tribeswell.com) where
   I develop and maintain dozens of WordPress websites.
 baseurl: 
-url: 
+author_bg_image: "/uploads/alexander-rotker-107460.jpg"
 twitter_username: dajocarter
 github_username: dajocarter
 markdown: kramdown
@@ -39,3 +39,4 @@ exclude:
 - node_modules/
 - package.json
 - gulpfile.js
+author_image: "/uploads/profile.jpg"
