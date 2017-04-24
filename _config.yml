@@ -23,7 +23,7 @@ defaults:
 permalink: pretty
 email: dajocarter@gmail.com
 description: Hi, I'm David Carter and I'm addicted to the internet. I am currently
-  the Director of Technical Services at [Tribeswell][https://tribeswell.com] where
+  the Director of Technical Services at [Tribeswell](https://tribeswell.com) where
   I develop and maintain dozens of WordPress websites.
 baseurl: 
 url: 
