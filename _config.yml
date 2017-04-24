@@ -25,10 +25,12 @@ email: dajocarter@gmail.com
 description: Hi, I'm David Carter and I'm addicted to the internet. I am currently
   the Director of Technical Services at [Tribeswell](https://tribeswell.com) where
   I develop and maintain dozens of WordPress websites.
-baseurl: 
+author: David Carter
+author_image: "/uploads/profile.jpg"
 author_bg_image: "/uploads/alexander-rotker-107460.jpg"
 twitter_username: dajocarter
 github_username: dajocarter
+baseurl: 
 markdown: kramdown
 gems:
 - jekyll-feed
@@ -39,4 +41,3 @@ exclude:
 - node_modules/
 - package.json
 - gulpfile.js
-author_image: "/uploads/profile.jpg"
