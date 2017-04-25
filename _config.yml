@@ -26,11 +26,21 @@ description: Hi, I'm David Carter and I'm addicted to the internet. I am current
   the Director of Technical Services at [Tribeswell](https://tribeswell.com) where
   I develop and maintain dozens of WordPress websites.
 author: David Carter
-author_description: Internet junkie. Denver Broncos fan. Proud Dog Owner.
 author_image: "/uploads/profile.jpg"
 author_bg_image: "/uploads/alexander-rotker-107460.jpg"
-twitter_username: dajocarter
-github_username: dajocarter
+links:
+- url: mailto:dajocarter@gmail.com
+  icon: icon-envelope
+  text: dajocarter@gmail.com
+- url: "//github.com/dajocarter"
+  icon: icon-github
+  text: dajocarter
+- url: "//twitter.com/dajocarter"
+  icon: icon-twitter
+  text: dajocarter
+- url: "//instagram.com/dajocarter"
+  icon: icon-instagram
+  text: dajocarter
 baseurl: 
 markdown: kramdown
 gems:
