@@ -135,6 +135,7 @@ gulp.task( 'build:scripts', () =>
     'node_modules/jquery/dist/jquery.js',
     'node_modules/tether/dist/js/tether.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
+    'node_modules/instafeed.js/instafeed.js',
     // Add all npm packages first
     '_assets/js/**/*.js'
   ] )
