@@ -1,9 +1,11 @@
 ---
 title: Welcome to Jekyll!
-date: 2017-04-01 18:12:18 -04:00
+date: 2017-04-01 18:12:00 -04:00
 categories:
 - jekyll
 - update
+description: Learn where to find your posts, how to edit them and view the changes,
+  and how to add new posts.
 layout: post
 ---
 
