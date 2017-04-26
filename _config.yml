@@ -2,6 +2,9 @@
 title: dajocarter
 timezone: America/Indiana/Indianapolis
 collections:
+  categories:
+    title: Categories
+    output: true
   posts:
     title: Posts
     output: true
