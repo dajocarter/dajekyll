@@ -18,7 +18,12 @@ layout: default
           <small>
             <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">Posted on {{ post.date | date: "%b %-d, %Y" }}</time>
             {% if post.categories %}
-              • <span itemprop="keywords">{{ post.categories | join: ', ' }} </span>
+              • <span itemprop="keywords">
+              {% for cat in post.categories %}
+                {% assign category = site.categories | where: 'title', cat | first %}
+                <a href="{{ category.url | relative_url }}">{{ category.title }}</a>
+              {% endfor %}
+              </span>
             {% endif %}
           </small>
         </p>
