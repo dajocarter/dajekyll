@@ -5,6 +5,8 @@ $fa-font-size-base: 16px;
 
 @import "font-awesome";
 
+@import "syntax-highlighting.scss";
+
 main {
   background-color: #f5f8fa;
   padding-top: 15px;
@@ -62,4 +64,17 @@ main {
       margin-bottom: 0;
     }
   }
+}
+
+pre {
+  padding: 1rem;
+
+  code {
+    color: #f8f8f2;
+  }
+}
+
+code {
+  background-color: #272822;
+  color: #f8f8f2;
 }
