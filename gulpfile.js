@@ -16,7 +16,7 @@ function handleErrors () {
   const args = Array.prototype.slice.call( arguments );
 
   $.notify.onError( {
-    'title': 'Task Failed <%= error.message %>',
+    'title': 'Task Failed: <%= error %>',
     'message': 'See console.',
     'sound': 'Sosumi' // See: https://github.com/mikaelbr/node-notifier#all-notification-options-with-their-defaults
   } ).apply( this, args );
