@@ -1,13 +1,9 @@
 ---
 title: Sample Page
 date: 2017-04-02 00:02:00 -04:00
-images:
-- "/uploads/matt-jones-94160.jpg"
-- "/uploads/alexander-rotker-107460.jpg"
-- "/uploads/stuart-guest-smith-123759.jpg"
-- "/uploads/roman-arkhipov-123612.jpg"
-- "/uploads/tim-trad-205977.jpg"
-layout: sample
+layout: page
+---
+
 ---
 
 # Heading 1
