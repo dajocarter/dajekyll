@@ -37,5 +37,3 @@ Lorem ipsum dolor sit amet, emphasis consectetuer adipiscing elit. Nullam dignis
 * List item one
 * List item two
 * List item three
-
----
