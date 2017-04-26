@@ -133,6 +133,7 @@ gulp.task( 'clean:images', ( callback ) => {
 gulp.task( 'build:scripts', () =>
   gulp.src( [
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/tether/dist/js/tether.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
     // Add all npm packages first
     '_assets/js/**/*.js'
