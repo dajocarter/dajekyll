@@ -4,3 +4,54 @@ $fa-css-prefix: "icon";
 $fa-font-size-base: 16px;
 
 @import "font-awesome";
+
+main {
+  background-color: #f5f8fa;
+  padding-top: 15px;
+}
+
+.card-img-top {
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.card {
+  img.circle {
+    max-width: 100px;
+    margin-top: -70px;
+    margin-bottom: 5px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.list-group-flush {
+  li {
+    border: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.card-columns {
+  .card {
+    border: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    column-count: 2;
+  }
+}
+
+.card-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
