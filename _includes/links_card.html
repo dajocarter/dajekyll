@@ -1,0 +1,14 @@
+<div class="links card mb-4">
+  <div class="card-block">
+    <h6>Quick Links</h6>
+    {% if site.links %}
+    <ul class="list-group list-group-flush">
+      {% for link in site.links %}
+        <li class="list-group-item">
+          <a href="{{ link.url }}" target="_blank"><i class="icon icon-fw {{ link.icon }}"></i> {{ link.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</div>
