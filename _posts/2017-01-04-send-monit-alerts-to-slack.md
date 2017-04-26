@@ -1,11 +1,11 @@
 ---
-title: 'Send Monit Alerts to Slack'
+title: Send Monit Alerts to Slack
+date: 2017-01-04 17:12:00 -05:00
 categories:
 - Monit
 - Slack
 - Ubuntu
 description: Learn how to install Monit and send its alerts to a Slack channel
-date: 2017-01-04 18:12:00 -04:00
 layout: post
 ---
 
