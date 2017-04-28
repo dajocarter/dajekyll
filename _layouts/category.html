@@ -3,6 +3,14 @@ layout: default
 ---
 
 <div class="category">
+  <div class="card mb-4">
+    <div class="card-block">
+      <h1 class="card-title">Posts in the {{ page.title | escape }} Category </h1>
+      <div class="card-text">
+        {{ content }}
+      </div>
+    </div>
+  </div>
   {% assign posts = site.posts | where: 'categories', page.title %}
   {% for post in posts %}
     <div class="card mb-4">

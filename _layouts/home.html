@@ -3,6 +3,15 @@ layout: default
 ---
 
 <div class="home">
+  <div class="card mb-4">
+    <div class="card-block">
+      <h1 class="card-title">Home</h1>
+      <div class="card-text">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
   {% for post in site.posts %}
     <div class="card mb-4">
       {% if post.image %}
