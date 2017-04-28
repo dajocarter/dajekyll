@@ -79,3 +79,15 @@ code {
   background-color: #272822;
   color: #f8f8f2;
 }
+
+.post-description {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  font-style: italic;
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+
+  > p:last-child {
+    margin-bottom: 0;
+  }
+}
