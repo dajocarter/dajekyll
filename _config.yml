@@ -11,11 +11,9 @@ collections:
   projects:
     title: Projects
     output: true
-    url:
-    logo_image:
     screenshots:
-    - image:
-      description:
+    - image: 
+      description: 
   uploads:
     title: Uploads
     output: true
@@ -53,7 +51,7 @@ links:
 - url: "//instagram.com/dajocarter"
   icon: icon-instagram
   text: dajocarter
-baseurl:
+baseurl: 
 markdown: kramdown
 gems:
 - jekyll-feed
