@@ -3,6 +3,6 @@ title: CFC Properties Quilt SPA
 date: 2017-04-29 11:36:00 -04:00
 link: "//cfcquilt.com"
 description: 
-logo_image: 
+logo_image: "/uploads/30-Year-CFC-Badge.png"
 ---
 
