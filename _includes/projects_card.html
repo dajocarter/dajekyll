@@ -1,0 +1,14 @@
+<div class="projects card mb-4">
+  <div class="card-block">
+    <h6 class="mt-2">Projects</h6>
+    <div class="card-columns">
+      <div class="card mb-2">
+        {% for project in site.projects %}
+        <a href="{{ project.url | relative_url }}" title="{{ project.title }}">
+          <img class="card-img img-fluid" src="{{ project.logo_image }}" alt="{{ project.title }}" />
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
