@@ -53,7 +53,7 @@ links:
 - url: "//instagram.com/dajocarter"
   icon: icon-instagram
   text: dajocarter
-baseurl:
+baseurl: 
 markdown: kramdown
 gems:
 - jekyll-feed
