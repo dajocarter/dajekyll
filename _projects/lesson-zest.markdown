@@ -3,7 +3,7 @@ title: Lesson Zest
 date: 2017-04-28 20:05:00 -04:00
 tags:
 - WordPress
-url: https://lessonzest.com
+link: https://lessonzest.com
 logo_image: "/uploads/lesson-zest.png"
 description: Lesson Zest is online resource of activity plans for elementary school
   children.
