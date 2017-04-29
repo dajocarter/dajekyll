@@ -11,9 +11,6 @@ collections:
   projects:
     title: Projects
     output: true
-    screenshots:
-    - image: 
-      description: 
   uploads:
     title: Uploads
     output: true
@@ -23,12 +20,17 @@ defaults:
     type: posts
   values:
     layout: post
-    permalink: "/posts/:title/"
+    permalink: "/blog/:title/"
 - scope:
     path: ''
     type: pages
   values:
     layout: page
+- scope:
+    path: ''
+    type: projects
+  values:
+    layout: project
 permalink: pretty
 email: dajocarter@gmail.com
 description: Hi, I'm David Carter and I'm addicted to the internet. I am currently
@@ -51,7 +53,7 @@ links:
 - url: "//instagram.com/dajocarter"
   icon: icon-instagram
   text: dajocarter
-baseurl: 
+baseurl:
 markdown: kramdown
 gems:
 - jekyll-feed
