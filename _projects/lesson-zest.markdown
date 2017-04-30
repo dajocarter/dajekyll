@@ -5,7 +5,7 @@ tags:
 - WordPress
 position: 10
 link: https://lessonzest.com
-logo_image: "/uploads/lesson-zest.png"
+logo_image: "/uploads/lesson-zest-logo.png"
 description: Lesson Zest is online resource of activity plans for elementary school
   children.
 layout: project
