@@ -2,11 +2,11 @@
   {% for card in include.cards %}
     {% case card %}
       {% when 'author' %}
-        {% include author_card.html %}
+        {% include card__author.html %}
       {% when 'links' %}
-        {% include links_card.html %}
+        {% include card__links.html %}
       {% when 'projects' %}
-        {% include projects_card.html %}
+        {% include card__projects.html %}
     {% endcase %}
   {% endfor %}
 </div>
