@@ -2,18 +2,26 @@
 layout: default
 ---
 
-<article class="post card mb-4">
+{% include left-sidebar.html %}
 
-  <div class="card-block">
+<div class="col-lg-6">
 
-    <header class="post-header">
-      <h1 class="post-title">{{ page.title | escape }}</h1>
-    </header>
+  <article class="post card mb-4">
 
-    <div class="post-content">
-      {{ content }}
+    <div class="card-block">
+
+      <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+      </header>
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+
     </div>
 
-  </div>
+  </article>
 
-</article>
+</div>
+
+{% include right-sidebar.html %}

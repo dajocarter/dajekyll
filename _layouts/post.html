@@ -2,36 +2,44 @@
 layout: default
 ---
 
-<article class="post card mb-4" itemscope itemtype="http://schema.org/BlogPosting">
+{% include left-sidebar.html %}
 
-  <div class="card-block">
+<div class="col-lg-6">
 
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-      <p class="post-meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">Posted on {{ page.date | date: "%b %-d, %Y" }}</time>
-        {% if page.categories %}
-          • Filed under <span itemprop="keywords">
-          {% for cat in page.categories %}
-            {% assign category = site.categories | where: 'title', cat | first %}
-            <a href="{{ category.url | relative_url }}">{{ category.title }}</a>{% unless forloop.last == true %}, {% endunless %}
-          {% endfor %}
-          </span>
-        {% endif %}
-      </p>
-      <div class="post-description">
-        {{ page.description | markdownify }}
+  <article class="post card mb-4" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="card-block">
+
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+        <p class="post-meta">
+          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">Posted on {{ page.date | date: "%b %-d, %Y" }}</time>
+          {% if page.categories %}
+            • Filed under <span itemprop="keywords">
+            {% for cat in page.categories %}
+              {% assign category = site.categories | where: 'title', cat | first %}
+              <a href="{{ category.url | relative_url }}">{{ category.title }}</a>{% unless forloop.last == true %}, {% endunless %}
+            {% endfor %}
+            </span>
+          {% endif %}
+        </p>
+        <div class="post-description">
+          {{ page.description | markdownify }}
+        </div>
+      </header>
+
+      <div class="post-content" itemprop="articleBody">
+        {{ content }}
       </div>
-    </header>
 
-    <div class="post-content" itemprop="articleBody">
-      {{ content }}
+      {% if site.disqus.shortname %}
+        {% include disqus_comments.html %}
+      {% endif %}
+
     </div>
 
-    {% if site.disqus.shortname %}
-      {% include disqus_comments.html %}
-    {% endif %}
+  </article>
 
-  </div>
+</div>
 
-</article>
+{% include right-sidebar.html %}

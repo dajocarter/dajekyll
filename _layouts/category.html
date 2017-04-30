@@ -2,40 +2,48 @@
 layout: default
 ---
 
-<div class="category">
-  <div class="card mb-4">
-    <div class="card-block">
-      <h1 class="card-title">Posts in the {{ page.title | escape }} Category </h1>
-      <div class="card-text">
-        {{ content }}
-      </div>
-    </div>
-  </div>
-  {% assign posts = site.posts | where: 'categories', page.title %}
-  {% for post in posts %}
+{% include left-sidebar.html %}
+
+<div class="col-lg-6">
+
+  <div class="category">
     <div class="card mb-4">
-      {% if post.image %}
-      <img class="card-img-top" src="{{ post.image }}" alt="{{ post.title | escape }}">
-      {% endif %}
       <div class="card-block">
-        <h4 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h4>
-        <div class="card-text">{{ post.description | markdownify }}</div>
-      </div>
-      <div class="card-footer">
-        <p class="card-text post-meta text-muted">
-          <small>
-            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">Posted on {{ post.date | date: "%b %-d, %Y" }}</time>
-            {% if post.categories %}
-              • Filed under <span itemprop="keywords">
-              {% for cat in post.categories %}
-                {% assign category = site.categories | where: 'title', cat | first %}
-                <a href="{{ category.url | relative_url }}">{{ category.title }}</a>{% unless forloop.last == true %}, {% endunless %}
-              {% endfor %}
-              </span>
-            {% endif %}
-          </small>
-        </p>
+        <h1 class="card-title">Posts in the {{ page.title | escape }} Category </h1>
+        <div class="card-text">
+          {{ content }}
+        </div>
       </div>
     </div>
-  {% endfor %}
+    {% assign posts = site.posts | where: 'categories', page.title %}
+    {% for post in posts %}
+      <div class="card mb-4">
+        {% if post.image %}
+        <img class="card-img-top" src="{{ post.image }}" alt="{{ post.title | escape }}">
+        {% endif %}
+        <div class="card-block">
+          <h4 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h4>
+          <div class="card-text">{{ post.description | markdownify }}</div>
+        </div>
+        <div class="card-footer">
+          <p class="card-text post-meta text-muted">
+            <small>
+              <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">Posted on {{ post.date | date: "%b %-d, %Y" }}</time>
+              {% if post.categories %}
+                • Filed under <span itemprop="keywords">
+                {% for cat in post.categories %}
+                  {% assign category = site.categories | where: 'title', cat | first %}
+                  <a href="{{ category.url | relative_url }}">{{ category.title }}</a>{% unless forloop.last == true %}, {% endunless %}
+                {% endfor %}
+                </span>
+              {% endif %}
+            </small>
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
 </div>
+
+{% include right-sidebar.html %}
