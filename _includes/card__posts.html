@@ -1,6 +1,6 @@
 <div class="posts card mb-4">
   <div class="card-block">
-    <h4 class="card-title mt-2">Recent Posts</h4>
+    <h4 class="card-title list-title">Recent Posts</h4>
     {% assign posts = site.posts | sort: 'position' %}
     <ul class="list-group list-group-flush">
       {% for post in posts limit: 5 %}

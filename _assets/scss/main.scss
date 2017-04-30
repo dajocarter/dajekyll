@@ -33,6 +33,16 @@ main {
   }
 }
 
+.card-title {
+  border-bottom: 1px solid rgba(black, 0.125);
+  margin: 0 0 1rem;
+  padding-bottom: 1rem;
+
+  &.list-title {
+    margin-bottom: 0.25rem;
+  }
+}
+
 .list-group-flush {
   li {
     border: 0;
@@ -59,7 +69,8 @@ main {
 }
 
 .home,
-.category {
+.category,
+.author {
   .card-text {
     p:last-child {
       margin-bottom: 0;
