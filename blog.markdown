@@ -1,5 +1,5 @@
 ---
 title: Blog
-date: 2017-04-30 14:00:00 -04:00
+layout: blog
 ---
 
