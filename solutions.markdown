@@ -1,5 +1,6 @@
 ---
 title: Solutions
-date: 2017-04-30 14:26:00 -04:00
+layout: archive__solutions
 ---
 
+Welcome to my solutions page! Here you'll find a list of posts recording problems I came across during development and the *solutions* I implemented to fix them.
