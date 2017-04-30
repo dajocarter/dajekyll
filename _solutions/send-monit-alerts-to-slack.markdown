@@ -4,6 +4,8 @@ date: 2017-04-30 14:33:00 -04:00
 categories:
 - Monit
 - Slack
+description: Learn how to install Monit and send its alerts to a Slack channel
+layout: post
 ---
 
 This is the introductory sentence. Something about needing to monitor your servers. This post will show you how to install Monit on a Ubuntu server to send alerts to you on Slack. If you're not using Slack, this post is still applicable as intructions for installation.
