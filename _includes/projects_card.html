@@ -2,7 +2,8 @@
   <div class="card-block">
     <h6 class="mt-2">Projects</h6>
     <div class="card-columns">
-      {% for project in site.projects %}
+      {% assign projects = site.projects | sort: 'position' %}
+      {% for project in projects %}
         <div class="card mb-2">
           <a href="{{ project.url | relative_url }}" title="{{ project.title }}">
             <img class="card-img img-fluid" src="{{ project.logo_image }}" alt="{{ project.title }}" />
