@@ -3,6 +3,8 @@ title: Welcome to Jekyll!
 date: 2017-04-01 18:12:00 -04:00
 categories:
 - Jekyll
+tags:
+- blog
 description: Learn where to find your posts, how to edit them and view the changes,
   and how to add new posts.
 layout: post
