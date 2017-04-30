@@ -1,0 +1,12 @@
+<div class="col-lg-3">
+  {% for card in include.cards %}
+    {% case card %}
+      {% when 'author' %}
+        {% include author_card.html %}
+      {% when 'links' %}
+        {% include links_card.html %}
+      {% when 'projects' %}
+        {% include projects_card.html %}
+    {% endcase %}
+  {% endfor %}
+</div>

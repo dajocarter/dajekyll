@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-
-{% include left-sidebar.html %}
+{% assign leftSidebarCards = "author, links" | split: ', ' %}
+{% include sidebar.html cards=leftSidebarCards %}
 
 <div class="col-lg-6">
 
@@ -46,4 +46,5 @@ layout: default
 
 </div>
 
-{% include right-sidebar.html %}
+{% assign rightSidebarCards = "projects" | split: ', ' %}
+{% include sidebar.html cards=rightSidebarCards %}
