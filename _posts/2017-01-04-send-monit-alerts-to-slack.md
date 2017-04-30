@@ -4,6 +4,8 @@ date: 2017-01-04 17:12:00 -05:00
 categories:
 - Monit
 - Slack
+tags:
+- solutions
 description: Learn how to install Monit and send its alerts to a Slack channel
 layout: post
 ---
