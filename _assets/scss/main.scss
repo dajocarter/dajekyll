@@ -101,3 +101,10 @@ code {
     margin-bottom: 0;
   }
 }
+
+@include media-breakpoint-down(md) {
+  .navbar-brand,
+  .navMenu {
+    padding-left: 1rem;
+  }
+}
