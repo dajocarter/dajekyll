@@ -1,0 +1,13 @@
+<div class="solutions card mb-4">
+  <div class="card-block">
+    <h4 class="card-title list-title">Recent Solutions</h4>
+    {% assign sorted_posts = site.solutions | sort: 'date' | reverse %}
+    <ul class="list-group list-group-flush">
+      {% for post in sorted_posts limit: 5 %}
+        <li class="list-group-item">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
