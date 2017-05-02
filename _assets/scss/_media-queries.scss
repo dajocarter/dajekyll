@@ -1,0 +1,53 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+@include media-breakpoint-up(xs) { ... }
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) { ... }
+@include media-breakpoint-down(xs) { ... }
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) { ... }
+@include media-breakpoint-only(xs) { ... }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+@include media-breakpoint-up(sm) { ... }
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) { ... }
+@include media-breakpoint-down(sm) { ... }
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) { ... }
+@include media-breakpoint-only(sm) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+@include media-breakpoint-up(md) { ... }
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) { ... }
+@include media-breakpoint-down(md) { ... }
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) { ... }
+@include media-breakpoint-only(md) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+@include media-breakpoint-up(lg) { ... }
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) { ... }
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) { ... }
+@include media-breakpoint-only(lg) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+@include media-breakpoint-up(xl) { ... }
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+@include media-breakpoint-down(lg) { ... }
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+@include media-breakpoint-only(xl) { ... }
+
+// Example
+// Apply styles starting from medium devices and up to extra large devices
+@media (min-width: 768px) and (max-width: 1199px) { ... }
+@include media-breakpoint-between(md, xl) { ... }
