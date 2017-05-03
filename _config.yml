@@ -11,9 +11,6 @@ collections:
   projects:
     title: Projects
     output: true
-  solutions:
-    title: Solutions
-    output: true
   uploads:
     title: Uploads
     output: true
