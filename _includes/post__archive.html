@@ -1,0 +1,24 @@
+<div class="card mb-4">
+  {% if include.post.hero_image %}
+  <img class="card-img-top" src="{{ include.post.hero_image }}" alt="{{ include.post.title | escape }}">
+  {% endif %}
+  <div class="card-block">
+    <h4 class="card-title"><a href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a></h4>
+    <div class="card-text">{{ include.post.description | markdownify }}</div>
+  </div>
+  <div class="card-footer">
+    <p class="card-text post-meta text-muted">
+      <small>
+        <time datetime="{{ include.post.date | date_to_xmlschema }}" itemprop="datePublished">Posted on {{ include.post.date | date: "%b %-d, %Y" }}</time>
+        {% if include.post.categories %}
+          • Filed under <span itemprop="keywords">
+          {% for cat in include.post.categories %}
+            {% assign category = site.categories | where: 'title', cat | first %}
+            <a href="{{ category.url | relative_url }}">{{ category.title }}</a>{% unless forloop.last == true %}, {% endunless %}
+          {% endfor %}
+          </span>
+        {% endif %}
+      </small>
+    </p>
+  </div>
+</div>
