@@ -1,5 +1,6 @@
 ---
-title: Projects
+title: Work
+position: 1
 layout: archive__projects
 ---
 
