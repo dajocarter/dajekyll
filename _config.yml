@@ -54,6 +54,7 @@ links:
   icon: icon-instagram
   text: dajocarter
 baseurl:
+url: https://layout--dajocarter.netlify.com
 markdown: kramdown
 gems:
 - jekyll-feed
@@ -64,4 +65,3 @@ exclude:
 - node_modules/
 - package.json
 - gulpfile.js
-url: https://dajocarter.netlify.com
