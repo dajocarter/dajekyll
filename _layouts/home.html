@@ -2,24 +2,8 @@
 layout: default
 ---
 
-{% assign leftSidebarCards = "author, links" | split: ', ' %}
-{% include sidebar.html cards=leftSidebarCards %}
+{% include section__author.html %}
 
-<div class="col-lg-6">
-
-  <div class="home">
-    <div class="card mb-4">
-      <div class="card-block">
-        <h1 class="card-title">Welcome</h1>
-        <div class="card-text">
-          {{ content }}
-        </div>
-      </div>
-    </div>
-
-  </div>
-
+<div class="content">
+  {{ content }}
 </div>
-
-{% assign rightSidebarCards = "posts, projects" | split: ', ' %}
-{% include sidebar.html cards=rightSidebarCards %}

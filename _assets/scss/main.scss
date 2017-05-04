@@ -8,9 +8,20 @@ $fa-font-size-base: 16px;
 @import "syntax-highlighting.scss";
 
 @import "header";
+@import "home";
 
 main {
   padding-top: 15px;
+}
+
+.bg-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  padding: 1rem;
 }
 
 .card-img-top {
