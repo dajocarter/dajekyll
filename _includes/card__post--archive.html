@@ -1,6 +1,6 @@
 <div class="card mb-4">
-  {% if post.image %}
-  <img class="card-img-top" src="{{ post.image }}" alt="{{ post.title | escape }}">
+  {% if post.hero_image %}
+  <img class="card-img-top" src="{{ post.hero_image }}" alt="{{ post.title | escape }}">
   {% endif %}
   <div class="card-block">
     <h4 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h4>

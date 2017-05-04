@@ -6,7 +6,7 @@
       {% for project in projects %}
         <div class="card mb-2">
           <a href="{{ project.url | relative_url }}" title="{{ project.title }}">
-            <img class="card-img img-fluid" src="{{ project.logo_image }}" alt="{{ project.title }}" />
+            <img class="card-img img-fluid" src="{{ project.hero_image }}" alt="{{ project.title }}" />
           </a>
         </div>
       {% endfor %}

@@ -6,7 +6,7 @@ link: "//thefreshforkonline.com"
 description: The Fresh Fork offers microwaveable, prepared meals with a different
   menu each week. Users select a future date for pickup or delivery, and then proceed
   to select up to 3 different dishes for each meal.
-logo_image: "/uploads/the-fresh-fork-logo.png"
+hero_image: "/uploads/the-fresh-fork-logo.png"
 ---
 
 ## What's So Different About It?
