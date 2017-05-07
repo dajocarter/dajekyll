@@ -2,46 +2,36 @@
 layout: default
 ---
 
-{% assign leftSidebarCards = "author, links" | split: ', ' %}
-{% include sidebar.html cards=leftSidebarCards %}
+<article class="post card mb-4" itemscope itemtype="http://schema.org/BlogPosting">
 
-<div class="col-lg-6">
+  <div class="card-block">
 
-  <article class="post card mb-4" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <div class="card-block">
-
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-        <p class="post-meta">
-          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">Posted on {{ page.date | date: "%b %-d, %Y" }}</time>
-          {% if page.categories %}
-            • Filed under <span itemprop="keywords">
-            {% for cat in page.categories %}
-              {% assign category = site.categories | where: 'title', cat | first %}
-              <a href="{{ category.url | relative_url }}">{{ category.title }}</a>{% unless forloop.last == true %}, {% endunless %}
-            {% endfor %}
-            </span>
-          {% endif %}
-        </p>
-        <div itemprop="description" class="post-description">
-          {{ page.description | markdownify }}
-        </div>
-      </header>
-
-      <div class="post-content" itemprop="articleBody">
-        {{ content }}
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">Posted on {{ page.date | date: "%b %-d, %Y" }}</time>
+        {% if page.categories %}
+          • Filed under <span itemprop="keywords">
+          {% for cat in page.categories %}
+            {% assign category = site.categories | where: 'title', cat | first %}
+            <a href="{{ category.url | relative_url }}">{{ category.title }}</a>{% unless forloop.last == true %}, {% endunless %}
+          {% endfor %}
+          </span>
+        {% endif %}
+      </p>
+      <div itemprop="description" class="post-description">
+        {{ page.description | markdownify }}
       </div>
+    </header>
 
-      {% if site.disqus.shortname %}
-        {% include disqus_comments.html %}
-      {% endif %}
-
+    <div class="post-content" itemprop="articleBody">
+      {{ content }}
     </div>
 
-  </article>
+    {% if site.disqus.shortname %}
+      {% include disqus_comments.html %}
+    {% endif %}
 
-</div>
+  </div>
 
-{% assign rightSidebarCards = "posts, projects" | split: ', ' %}
-{% include sidebar.html cards=rightSidebarCards %}
+</article>
