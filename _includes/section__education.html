@@ -1,0 +1,16 @@
+<div class="education">
+
+  <h2>Education</h2>
+
+  <div class="unis">
+  {% for uni in site.universities %}
+    <div class="uni">
+      <img src="{{ uni.logo_image }}" alt="{{ uni.name }}">
+      <h4>{{ uni.degree_name }}</h4>
+      <h5><em>{{ uni.name }}</em></h5>
+      <em>{{ uni.degree_date }}</em>
+    </div>
+  {% endfor %}
+  </div>
+
+</div>

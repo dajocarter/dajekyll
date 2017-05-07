@@ -53,6 +53,15 @@ links:
 - url: "//instagram.com/dajocarter"
   icon: icon-instagram
   text: dajocarter
+universities:
+- name: Northern Illinois University
+  logo_image: "/uploads/Northern_Illinois_University_seal.png"
+  degree_name: Master of Science in Mathematics
+  degree_date: May 2013
+- name: California State University, Northridge
+  logo_image: "/uploads/CSUN-Seal.png"
+  degree_name: Bachelor of Arts in Mathematics
+  degree_date: May 2011
 baseurl:
 url: https://layout--dajocarter.netlify.com
 markdown: kramdown
