@@ -1,8 +1,0 @@
----
-layout: archive
----
-
-{% assign sorted_posts = site.solutions | sort: 'date' | reverse %}
-{% for post in sorted_posts %}
-  {% include card__post--archive.html %}
-{% endfor %}
