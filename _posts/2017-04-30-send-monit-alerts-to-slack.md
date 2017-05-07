@@ -4,6 +4,7 @@ date: 2017-04-30 14:33:00 -04:00
 categories:
 - Monit
 - Slack
+hero_image: "/uploads/hero-minified-code.jpg"
 description: Learn how to install Monit and send its alerts to a Slack channel
 layout: post
 ---
