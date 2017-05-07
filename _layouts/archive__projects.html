@@ -2,7 +2,7 @@
 layout: archive
 ---
 
-{% assign sorted_posts = site.projects | sort: 'date' | reverse %}
+{% assign sorted_posts = site.projects | sort: 'position' %}
 {% for post in sorted_posts %}
   {% include card__post--archive.html %}
 {% endfor %}
