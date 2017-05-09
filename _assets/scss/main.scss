@@ -15,11 +15,13 @@ $fa-font-size-base: 16px;
 @import "syntax-highlighting.scss";
 
 @import "header";
+@import "footer";
 @import "home";
 @import "archive";
 
 main {
   padding-top: 15px;
+  padding-bottom: 42px;
 }
 
 .bg-img {
