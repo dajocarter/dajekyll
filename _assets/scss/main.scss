@@ -5,6 +5,7 @@ $font-family-sans-serif: "Lato", sans-serif;
 //$headings-font-family: "Oswald", sans-serif;
 
 @import "bootstrap";
+@import "bootstrap_overrides";
 
 $fa-css-prefix: "icon";
 $fa-font-size-base: 16px;
@@ -31,18 +32,10 @@ main {
   padding: 1rem;
 }
 
-.card-img-top {
-  background-position: center;
-  background-size: cover;
-  height: 150px;
-}
-
 .circle {
   border-radius: 50%;
-}
 
-.card {
-  .circle {
+  .card & {
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,51 +45,6 @@ main {
     border: 3px solid #fff;
     border-radius: 100%;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  }
-}
-
-.card-title {
-  border-bottom: 1px solid rgba(black, 0.125);
-  margin: 0 0 1rem;
-  padding-bottom: 1rem;
-
-  &.list-title {
-    margin-bottom: 0.25rem;
-  }
-}
-
-.list-group-flush {
-  li {
-    border: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.card-columns {
-  .card {
-    border: 0;
-  }
-
-  @include media-breakpoint-up(lg) {
-    column-count: 2;
-  }
-}
-
-.card-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.home,
-.category,
-.author {
-  .card-text {
-    p:last-child {
-      margin-bottom: 0;
-    }
   }
 }
 
