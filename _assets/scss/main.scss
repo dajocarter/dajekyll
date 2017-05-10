@@ -17,11 +17,16 @@ $fa-font-size-base: 16px;
 @import "home";
 @import "archive";
 
+main {
+  position: relative;
+  z-index: 10;
+}
+
 .container {
   background-color: #fff;
   padding-top: 15px;
-  position: relative;
-  top: -150px;
+  margin: -200px auto 50px;
+}
 }
 
 .bg-img {
