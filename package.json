@@ -50,6 +50,7 @@
     "instafeed.js": "^1.4.1",
     "jquery": "^3.2.1",
     "normalize.css": "^6.0.0",
-    "tether": "^1.4.0"
+    "tether": "^1.4.0",
+    "waypoints": "^4.0.1"
   }
 }
