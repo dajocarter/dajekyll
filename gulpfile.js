@@ -179,6 +179,18 @@ gulp.task( 'clean:jekyll', ( callback ) => {
 });
 
 /**
+ * Minify the generated HTML files
+ *
+ * https://www.npmjs.com/package/gulp-htmlmin
+ */
+gulp.task( 'build:html', [ 'build:jekyll' ],  () =>
+  gulp.src( '_site/**/*.html' )
+    .pipe( $.plumber( { 'errorHandler': handleErrors } ) )
+    .pipe( $.htmlmin( { collapseWhitespace: true } ) )
+    .pipe( gulp.dest( '_site' ) )
+);
+
+/**
  * Culminating tasks
  *
  * https://www.npmjs.com/package/run-sequence
@@ -196,6 +208,7 @@ gulp.task( 'build', ( callback ) =>
     'clean',
     [ 'build:scripts', 'build:images', 'build:styles', 'build:fonts' ],
     'build:jekyll',
+    'build:html',
     callback
   )
 );
@@ -205,7 +218,7 @@ gulp.task( 'build', ( callback ) =>
  *
  * https://www.npmjs.com/package/browser-sync
  */
-gulp.task('build:jekyll:watch', ['build:jekyll'], ( callback ) => {
+gulp.task( 'build:jekyll:watch', [ 'build:html' ], ( callback ) => {
     browserSync.reload();
     callback();
 });
