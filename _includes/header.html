@@ -19,4 +19,6 @@
   </nav>
 </header>
 
-<div class="hero" style="background-image: url('{{ page.hero_image | default: site.hero_image | absolute_url }}');"></div>
+<div class="hero">
+  <img src="{{ page.hero_image | default: site.hero_image | absolute_url }}" alt="{{ page.title | default: site.title | escape }}">
+</div>
