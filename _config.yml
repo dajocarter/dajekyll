@@ -63,7 +63,7 @@ universities:
   degree_name: Bachelor of Arts in Mathematics
   degree_date: May 2011
 baseurl:
-url: https://layout--dajocarter.netlify.com
+url: https://dajocarter.netlify.com
 markdown: kramdown
 gems:
 - jekyll-feed
