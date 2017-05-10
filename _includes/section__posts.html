@@ -1,5 +1,5 @@
 <div class="recent-posts">
-  <h2 class="section-title list-title">Recent Posts</h2>
+  <h2 class="section-title wrapper">Recent Posts</h2>
   {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
   <div class="post archive">
     {% for post in sorted_posts limit: 5 %}
