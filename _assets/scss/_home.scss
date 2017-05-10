@@ -1,10 +1,18 @@
 .author {
   .circle {
-    background-position: top center;
     width: 200px;
     height: 200px;
     border: 3px solid #000;
     margin: 2rem auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    img {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
   }
 
   .info {

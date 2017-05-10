@@ -1,7 +1,9 @@
 <div class="about">
 
   <div class="author">
-    <div class="circle bg-img author-img" style="background-image: url('{{ site.author_image }}');"></div>
+    <div class="circle">
+      <img src="{{ site.author_image }}" alt="{{ site.author }}">
+    </div>
 
     <div class="info">
       <div class="author-description">{{ site.author_description | markdownify }}</div>
