@@ -17,8 +17,11 @@ $fa-font-size-base: 16px;
 @import "home";
 @import "archive";
 
-main {
+.container {
+  background-color: #fff;
   padding-top: 15px;
+  position: relative;
+  top: -150px;
 }
 
 .bg-img {
@@ -122,12 +125,5 @@ code {
 
   > p:last-child {
     margin-bottom: 0;
-  }
-}
-
-@include media-breakpoint-down(md) {
-  .navbar-brand,
-  .navMenu {
-    padding-left: 1rem;
   }
 }

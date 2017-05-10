@@ -1,35 +1,22 @@
 <header>
-  <div class="hero" style="background-image: url('{{ page.hero_image | default: site.hero_image | absolute_url }}');">
-    <div class="overlay"></div>
-    <div class="page-title">
-      <h1 class="title">
-        {% if page.title == 'Home' %}
-          {{ site.title | escape }}
-        {% else %}
-          {{ page.title | default: site.title | escape }}
+  <nav class="navMenu">
+    <ul class="nav">
+      {% assign sorted_menu = site.pages | sort: 'position' %}
+      {% for page in sorted_menu %}
+
+        {% if page.title %}
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+
+          </li>
+
         {% endif %}
-      </h1>
-      <div class="description">
-        {{ page.description | default: site.description | markdownify }}
-      </div>
-    </div>
-  </div>
+
+      {% endfor %}
+    </ul>
+  </nav>
 </header>
-<nav class="menu">
-  <ul class="nav">
-    {% assign sorted_menu = site.pages | sort: 'position' %}
-    {% for page in sorted_menu %}
 
-      {% if page.title %}
-
-        <li class="nav-item">
-
-          <a class="nav-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
-
-        </li>
-
-      {% endif %}
-
-    {% endfor %}
-  </ul>
-</nav>
+<div class="hero" style="background-image: url('{{ page.hero_image | default: site.hero_image | absolute_url }}');"></div>

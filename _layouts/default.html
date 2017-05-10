@@ -7,9 +7,29 @@
 
     {% include header.html %}
 
-    <main class="container" aria-label="Content">
+    <main>
 
-      {{ content }}
+      <div class="container" aria-label="Content">
+
+        <div class="page-title">
+
+          <h1 class="text-center">
+            {% if page.title == 'Home' %}
+              {{ site.title | escape }}
+            {% else %}
+              {{ page.title | default: site.title | escape }}
+            {% endif %}
+          </h1>
+
+          <div class="description text-center">
+            {{ page.description | default: site.description | markdownify }}
+          </div>
+
+        </div>
+
+        {{ content }}
+
+      </div>
 
     </main>
 
