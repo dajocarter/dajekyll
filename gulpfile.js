@@ -107,6 +107,7 @@ gulp.task( 'clean:styles', ( callback ) => {
 gulp.task( 'build:images', () =>
   gulp.src( '_uploads/**/*' )
     .pipe( $.plumber( { 'errorHandler': handleErrors } ) )
+    .pipe( $.newer( '_uploads' ) )
     .pipe( $.imagemin( [
       $.imagemin.gifsicle( { 'interlaced': true } ),
       $.imagemin.jpegtran( { 'progressive': true } ),
