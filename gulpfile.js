@@ -170,7 +170,7 @@ gulp.task( 'clean:scripts', ( callback ) => {
 gulp.task( 'build:jekyll', () =>
   gulp.src('')
     .pipe( $.plumber( { 'errorHandler': handleErrors } ) )
-    .pipe($.run('bundle exec jekyll build'))
+    .pipe( $.run( 'bundle exec jekyll build' ) )
 );
 
 gulp.task( 'clean:jekyll', ( callback ) => {
@@ -223,7 +223,7 @@ gulp.task( 'build:jekyll:watch', [ 'build:html' ], ( callback ) => {
     callback();
 });
 
-gulp.task('build:scripts:watch', ['build:scripts'], ( callback ) => {
+gulp.task( 'build:scripts:watch', [ 'build:scripts' ], ( callback ) => {
     browserSync.reload();
     callback();
 });
@@ -243,31 +243,31 @@ gulp.task( 'serve', [ 'build' ], () => {
   });
 
   // Watch site settings.
-  gulp.watch(['_config.yml'], ['build:jekyll:watch']);
+  gulp.watch( [ '_config.yml' ], [ 'build:jekyll:watch' ] );
 
   // Watch .scss files; changes are piped to browserSync.
-  gulp.watch('_assets/scss/**/*.scss', ['build:styles']);
+  gulp.watch( '_assets/scss/**/*.scss', [ 'build:styles' ] );
 
   // Watch .js files.
-  gulp.watch('_assets/js/**/*.js', ['build:scripts:watch']);
+  gulp.watch( '_assets/js/**/*.js', [ 'build:scripts:watch' ] );
 
   // Watch image files; changes are piped to browserSync.
-  gulp.watch('_uploads/**/*', ['build:images']);
+  gulp.watch( '_uploads/**/*', [ 'build:images' ] );
 
   // Watch posts.
-  gulp.watch('_posts/**/*.+(md|markdown|MD)', ['build:jekyll:watch']);
+  gulp.watch( '_posts/**/*.+(md|markdown|MD)', [ 'build:jekyll:watch' ] );
 
   // Watch html and markdown files.
-  gulp.watch(['**/*.+(html|md|markdown|MD)', '!_site/**/*.*'], ['build:jekyll:watch']);
+  gulp.watch( [ '**/*.+(html|md|markdown|MD)', '!_site/**/*.*' ], [ 'build:jekyll:watch' ] );
 
   // Watch RSS feed XML file.
-  gulp.watch('feed.xml', ['build:jekyll:watch']);
+  gulp.watch( 'feed.xml', [ 'build:jekyll:watch' ] );
 
   // Watch data files.
-  gulp.watch('_data/**.*+(yml|yaml|csv|json)', ['build:jekyll:watch']);
+  gulp.watch( '_data/**.*+(yml|yaml|csv|json)', [ 'build:jekyll:watch' ] );
 
-  // Watch favicon.png.
-  gulp.watch('favicon.png', ['build:jekyll:watch']);
+  // Watch favicon.ico.
+  gulp.watch( 'favicon.ico', [ 'build:jekyll:watch' ] );
 });
 
 gulp.task( 'default', [ 'serve' ] );
