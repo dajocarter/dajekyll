@@ -63,6 +63,14 @@
   }
 }
 
+.section-title {
+  text-align: center;
+  border-bottom: 2px solid black;
+  width: 250px;
+  margin: 3rem auto;
+  padding-bottom: 1rem;
+}
+
 .unis {
   display: flex;
   flex-flow: row wrap;
