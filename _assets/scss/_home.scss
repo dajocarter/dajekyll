@@ -82,20 +82,13 @@
     width: 100%;
     padding: 1rem;
     text-align: center;
-
-    img {
-      width: auto;
-      height: 150px;
-      display: block;
-      margin: 1rem auto;
-    }
   }
 
   @media (min-width: 768px) {
     justify-content: space-around;
 
     .uni {
-      width: 50%;
+      width: 30%;
     }
   }
 }

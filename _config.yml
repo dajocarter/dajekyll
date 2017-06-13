@@ -55,13 +55,14 @@ links:
   text: dajocarter
 universities:
 - name: Northern Illinois University
-  logo_image: "/uploads/Northern_Illinois_University_seal.png"
   degree_name: Master of Science in Mathematics
-  degree_date: May 2013
+  degree_dates: 2011 - 2013
 - name: California State University, Northridge
-  logo_image: "/uploads/CSUN-Seal.png"
   degree_name: Bachelor of Arts in Mathematics
-  degree_date: May 2011
+  degree_dates: 2009 - 2011
+- name: Antelope Valley College
+  degree_name: Associate of Science in Mathematics
+  degree_dates: 2006 - 2009
 baseurl:
 url: https://dajocarter.netlify.com
 markdown: kramdown

@@ -5,10 +5,10 @@
   <div class="unis">
   {% for uni in site.universities %}
     <div class="uni">
-      <img src="{{ uni.logo_image }}" alt="{{ uni.name }}">
-      <h4>{{ uni.degree_name }}</h4>
+      <h3>{{ uni.degree_name }}</h3>
+      <hr>
       <h5><em>{{ uni.name }}</em></h5>
-      <em>{{ uni.degree_date }}</em>
+      <em>{{ uni.degree_dates }}</em>
     </div>
   {% endfor %}
   </div>
