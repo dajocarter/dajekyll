@@ -2,28 +2,24 @@
 layout: default
 ---
 
-{% assign leftSidebarCards = "author, links" | split: ', ' %}
-{% include sidebar.html cards=leftSidebarCards %}
+<div class="content wrapper">
+  {{ content }}
 
-<div class="col-lg-6">
-
-  <article class="post card mb-4">
-
-    <div class="card-block">
-
-      <header class="post-header">
-        <h1 class="post-title">{{ page.title | escape }}</h1>
-      </header>
-
-      <div class="post-content">
-        {{ content }}
-      </div>
-
+  {% if page.items %}
+    <div class="list">
+      {% for item in page.items %}
+        <div class="item media">
+          <div class="media-left">
+            <a target="_blank" href="{{ item.url }}">
+              <img class="media-object" src="{{ item.image }}" alt="{{ item.title }}">
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{ item.title }}</h4>
+            {{ item.text | markdownify }}
+          </div>
+        </div>
+      {% endfor %}
     </div>
-
-  </article>
-
+  {% endif %}
 </div>
-
-{% assign rightSidebarCards = "posts, projects" | split: ', ' %}
-{% include sidebar.html cards=rightSidebarCards %}
